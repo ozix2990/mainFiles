@@ -1,0 +1,6 @@
+@mixin adaptive ($property, $first-value, $last-value, $first-width, $last-width:320) {
+    @media(min-width:$last-width+px){
+        #{$property}: calc(#{$last-value+px} + (#{$first-value} - #{$last-value}) * ((100vw - #{$last-width+ px}) / (#{$first-width} - #{$last-width})))
+    }
+ 
+}
